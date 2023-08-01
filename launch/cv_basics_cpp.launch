@@ -1,12 +1,12 @@
 <launch>
   <node
-    pkg="cv_basics"
+    pkg="opencv_ros"
     type="webcam_pub_cpp"
     name="webcam_pub_cpp"
     output="screen"
   />
   <node
-    pkg="cv_basics"
+    pkg="opencv_ros"
     type="webcam_sub_cpp"
     name="webcam_sub_cpp"
     output="screen"
