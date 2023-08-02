@@ -26,6 +26,7 @@ def callback(data):
   # Display image
   cv2.imshow("camera", current_frame)
 
+  # Write single image
   #cv2.imwrite('/home/denis/catkin_ws/src/cv_basics/scripts/empty_pads1.png',current_frame)
    
   cv2.waitKey(1)
@@ -38,8 +39,9 @@ def receive_message():
   rospy.init_node('video_sub_py', anonymous=True)
    
   # Node is subscribing to the video_frames topic
-  rospy.Subscriber('/table/camera1/image_raw', Image, callback)
- 
+  #rospy.Subscriber('/table/camera1/image_raw', Image, callback)
+  rospy.Subscriber('/video_frames', Image, callback)
+   
   # spin() simply keeps python from exiting until this node is stopped
   rospy.spin()
  
